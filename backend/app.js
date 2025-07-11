@@ -41,6 +41,10 @@ app.get('/api/test', (req, res) => {
   res.json({ success: true, message: 'Server is working' });
 });
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the API! Use /api/test to check if the server is working.');
+});
+
 // Error handling
 app.use(errorHandler);
 
